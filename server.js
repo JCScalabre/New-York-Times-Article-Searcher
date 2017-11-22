@@ -50,6 +50,14 @@ app.get("/api/saved", (req, res) => {
 	Article.find()
 	.then(articles => res.json(articles))
 })
+
+app.delete("/:id", (req, res) => {
+	Article
+	.findById({ _id: req.params.id })
+	.then(dbModel => dbModel.remove())
+	.then(dbModel => res.json(dbModel))
+	.catch(err => res.status(422).json(err));
+})
 /** end routes */
 
 // Send every request to the React app

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { SavedList, SavedListItem } from "../SavedList";
+import "./saved.css";
 
 const Saved = props => ( 
 <div>
@@ -12,9 +13,10 @@ const Saved = props => (
       		<p key={article.author}>{article.author}</p>
       		<p key={article.snippet}>Snippet: {article.snippet}</p>
       		<a target="_blank" href={article.url}>
-      		<p key={article.url}>URL: {article.url}</p>
+      		<p key={article.url}>Link to article (opens in new tab)</p>
       		</a>
       		<p key={article.date}>Date Saved: {article.date}</p>
+                  <button id={article._id} onClick={props.deleteArticle} className="btn delete btn-danger">Delete Article</button>
       	</div>
 			)
 	})}

@@ -23,5 +23,9 @@ export default {
 
 	getSaved: function() {
 		return axios.get("/api/saved")
+	},
+
+	deleteArticle: function(id) {
+		return axios.delete("/" + id)
 	}
 };
