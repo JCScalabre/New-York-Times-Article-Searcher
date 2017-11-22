@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Search.css";
-import API from "../../utils/API";
 import { ArticleList, ArticleListItem } from "../ArticleList";
 
 const Search = props => (

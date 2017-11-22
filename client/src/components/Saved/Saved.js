@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import API from "../../utils/API";
-import { SavedList, SavedListItem } from "../SavedList";
+import React from "react";
 import "./saved.css";
 
 const Saved = props => ( 
